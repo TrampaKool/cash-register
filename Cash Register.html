@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Cash Register</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="header-title">Cash Register</h1>
+      <div id="input-container">
+        <p class="cash-label">Customer's Cash:</p>
+        <input type="number" id="cash" class="cash-input" placeholder="Cash">
+        <button id="purchase-btn">Calculate</button>
+      </div>
+      <p id="result-p">Result:</p>
+      <p id="change-due"></p>
+
+      <div id="info">
+        <div id="totals">
+          <p>Checkout Total: $<span id="total-span" class="bold">0</span></p>
+		  <p>Price: $<span id="price" class="bold">0</span></p>
+          <p>Drawer Total: $<span id="drawer-total" class="bold">0</span>
+        </div>
+        <div id="drawer">
+          <p>Pennies: $<span class="drawer-span bold">0</span></p>
+          <p>Nickels: $<span class="drawer-span bold">0</span></p>
+          <p>Dimes: $<span class="drawer-span bold">0</span></p>
+          <p>Quarters: $<span class="drawer-span bold">0</span></p>
+          <p>Ones: $<span class="drawer-span bold">0</span></p>
+          <p>Fives: $<span class="drawer-span bold">0</span></p>
+          <p>Tens: $<span class="drawer-span bold">0</span></p>
+          <p>Twenties: $<span class="drawer-span bold">0</span></p>
+          <p>Hundreds: $<span class="drawer-span bold">0</span></p>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

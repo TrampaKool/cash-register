@@ -1,0 +1,187 @@
+:root {
+    --background-color: rgb(30, 35, 60);
+    --text-color: rgb(255, 130, 50);
+    --input-color: rgb(74, 90, 130);
+    --secondary-color: rgb(25, 25, 60);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Verdana", sans-serif;
+  }
+  
+  *, *:after, *:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 20rem);
+    place-items: center;
+    text-align: center;
+  }
+  
+  #header-title {
+    font-size: 3rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  
+  .cash-label {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  #input-container {
+    background-color: var(--secondary-color);
+    position: relative;
+    top: -75px;
+    padding: 15px;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cash-input {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    outline: none;
+  }
+  
+  .cash-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .cash-input:focus {
+    border: 2px solid var(--text-color);
+  }
+  
+  .cash-input:focus::placeholder {
+    color: transparent;
+  }
+  
+  #purchase-btn {
+    width: 50%;
+    background-color: var(--input-color);
+    border: 2px solid var(--text-color);
+    margin: 40px auto 0 auto;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border-radius: 20px;
+  }
+  
+  #purchase-btn:hover {
+    background-color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  #purchase-btn:active {
+    filter: brightness(50%);
+  }
+  
+  #result-p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    place-self: start center;
+    margin-top: 30px;
+  }
+  
+  #change-due {
+    height: 16rem;
+    width: 16.6rem;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    background-color: var(--input-color);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    place-self: end center;
+  }
+  
+  #info {
+    background-color: var(--input-color);
+    position: relative;
+    top: 50px;
+    height: 21rem;
+    width: 16.6rem;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 15px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    place-self: end center;
+  }
+  
+  #totals {
+    margin-bottom: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      html {
+          font-size: 14px;
+      }
+      
+      main {
+          grid-template-columns: 100%;
+          grid-template-rows: repeat(4, min-content);
+      }
+      
+      #header-title {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          margin: 20px 0;
+      }
+      #input-container {
+          position: static;
+          margin-bottom: 50px;
+          width: 90%;
+          grid-column: 1/2;
+          grid-row: 2/3;
+      }
+      
+      #result-p {
+          position: relative;
+          top: -35px;
+          grid-column: 1/2;
+          grid-row: 3/4;
+          margin: 0;
+          z-index: 10;
+      }
+      #change-due {
+          width: 90%;
+          grid-column: 1/2;
+          grid-row: 3/4;
+      }
+      
+      #info {
+          margin-top: 20px;
+          position: static;
+          width: 90%;
+          grid-column: 1/2;
+          grid-row: 4/5;
+          margin-bottom: 100px;
+      }
+  }
